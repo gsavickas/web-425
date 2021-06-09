@@ -1,3 +1,9 @@
+/**
+ * Author: Grayton Savickas
+ * Date: 6 June 2021
+ * Description: App component
+ */
+
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';

@@ -1,3 +1,9 @@
+/**
+ * Author: Grayton Savickas
+ * Date: 30 May 2021
+ * Description: App component
+ */
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MyDetailsComponent } from './my-details.component';

@@ -1,3 +1,10 @@
+/**
+ * Title: app.component.ts
+ * Author: Grayton Savickas
+ * Date: 30 May 2021
+ * Description: Hello world
+ */
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

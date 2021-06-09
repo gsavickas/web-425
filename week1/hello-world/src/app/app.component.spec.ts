@@ -1,3 +1,10 @@
+/**
+ * Title: app.component.ts
+ * Author: Grayton Savickas
+ * Date: 30 May 2021
+ * Description: Hello world
+ */
+
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';

@@ -1,3 +1,9 @@
+/**
+ * Author: Grayton Savickas
+ * Date: 6 June 2021
+ * Description: App component
+ */
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 

@@ -1,3 +1,10 @@
+/**
+ * Author: Grayton Savickas
+ * Date: 6 June 2021
+ * Description: App component
+ */
+
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

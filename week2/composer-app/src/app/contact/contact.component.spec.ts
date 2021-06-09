@@ -1,3 +1,9 @@
+/**
+ * Author: Grayton Savickas
+ * Date: 6 June 2021
+ * Description: App component
+ */
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactComponent } from './contact.component';
