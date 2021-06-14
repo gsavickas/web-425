@@ -1,3 +1,9 @@
+/**
+ * Author: Grayton Savickas
+ * Date: 13 June 2021
+ * Description: Enhanced Secure Profile App
+ **/
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
