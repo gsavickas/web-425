@@ -1,8 +1,7 @@
 /**
  * Author: Grayton Savickas
- * Date: 6 June 2021
- * Description: App component
- */
+ * Date: 13 June 2021
+ * Description: Secure Profile App */
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
