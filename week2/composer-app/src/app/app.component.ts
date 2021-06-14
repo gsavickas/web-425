@@ -1,7 +1,7 @@
 /**
  * Author: Grayton Savickas
  * Date: 13 June 2021
- * Description: Secure Profile App */
+ * Description: Enhanced Secure Profile App */
 
 import { Component } from '@angular/core';
 
