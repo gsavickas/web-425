@@ -1,3 +1,9 @@
+/**
+ * Author: Grayton Savickas
+ * Date: 13 June 2021
+ * Description: Enhanced Secure Profile App
+ **/
+
 import { Routes } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { SigninComponent } from "./signin/signin.component";

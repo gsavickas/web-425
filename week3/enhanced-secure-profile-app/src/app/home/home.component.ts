@@ -1,3 +1,9 @@
+/**
+ * Author: Grayton Savickas
+ * Date: 13 June 2021
+ * Description: Enhanced Secure Profile App
+ **/
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
