@@ -1,7 +1,7 @@
 /**
  * Author: Grayton Savickas
  * Date: 17 June 2021
- * Description: Enhanced Secure Profile App */
+ * Description: Observables App */
 
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 

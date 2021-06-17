@@ -1,7 +1,7 @@
 /**
  * Author: Grayton Savickas
  * Date: 17 June 2021
- * Description: Enhanced Secure Profile App */
+ * Description: Observables App */
 
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';

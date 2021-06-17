@@ -1,7 +1,7 @@
 /**
  * Author: Grayton Savickas
  * Date: 17 June 2021
- * Description: Enhanced Secure Profile App */
+ * Description: Observables App */
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
