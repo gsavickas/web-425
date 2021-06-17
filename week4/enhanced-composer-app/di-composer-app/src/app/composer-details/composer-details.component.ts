@@ -6,7 +6,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IComposer } from '../composer.interface';
-import { Composer } from '../composer.class'
+import { ComposerService } from '../composer.service';
 
 
 @Component({
@@ -20,11 +20,11 @@ export class ComposerDetailsComponent implements OnInit {
   composer: IComposer;
 
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private composerService: ComposerService) {
     this.composerId = parseInt(this.route.snapshot.paramMap.get('composerId'), 10);
 
     if (this.composerId){
-      this.composer = new Composer().getComposer(this.composerId)
+      this.composer = this.composerService.getComposer(this.composerId)
     }
    }
 

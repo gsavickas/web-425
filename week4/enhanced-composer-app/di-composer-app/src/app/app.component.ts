@@ -12,5 +12,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'enhanced-composer-app';
-  assignment: string = 'Exercise 3.2 - Passing Data to Routes, Part 1';
+  assignment: string = 'Exercise 4.2 - Inversion of Control and Dependency Injection';
 }

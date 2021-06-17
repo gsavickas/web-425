@@ -3,8 +3,14 @@
  * Date: 17 June 2021
  * Description: Enhanced Secure Profile App */
 
-import { IComposer } from "./composer.interface";
-export class Composer {
+import { Injectable } from '@angular/core';
+import { IComposer } from './composer.interface';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ComposerService {
+
   composers: Array<IComposer>;
 
   constructor(){
@@ -49,5 +55,4 @@ export class Composer {
       }
       return {} as IComposer
    }
-
-  }
+}
