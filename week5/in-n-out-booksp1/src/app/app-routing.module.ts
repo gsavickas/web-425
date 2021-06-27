@@ -1,3 +1,10 @@
+/**
+ * Title: app.component.ts
+ * Author: Grayton Savickas
+ * Date: 27 June 2021
+ * Description: App component
+ */
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
@@ -6,9 +13,9 @@ import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {path: '', component: BookListComponent},
-  {path: '/book-list', component: BookListComponent},
-  {path: '/contact', component: ContactComponent},
-  {path: '/about', component: AboutComponent}
+  {path: 'book-list', component: BookListComponent},
+  {path: 'contact', component: ContactComponent},
+  {path: 'about', component: AboutComponent}
 ];
 
 @NgModule({

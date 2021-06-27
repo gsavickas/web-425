@@ -1,3 +1,10 @@
+/**
+ * Title: app.component.ts
+ * Author: Grayton Savickas
+ * Date: 27 June 2021
+ * Description: App component
+ */
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +13,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'in-n-out-booksp1';
+  assignment = 'Assignment 5.2 - Navigation and Layout';
 }

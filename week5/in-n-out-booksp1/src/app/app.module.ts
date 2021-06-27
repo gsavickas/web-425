@@ -1,3 +1,10 @@
+/**
+ * Title: app.component.ts
+ * Author: Grayton Savickas
+ * Date: 27 June 2021
+ * Description: App component
+ */
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,18 +26,18 @@ import { MatIconModule } from '@angular/material/icon';
     AppComponent,
     AboutComponent,
     ContactComponent,
-    BookListComponent,
+    BookListComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
     MatListModule,
     FlexLayoutModule,
     MatIconModule
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
