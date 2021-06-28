@@ -13,5 +13,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  assignment = 'Assignment 5.2 - Navigation and Layout';
+  assignment = 'Assignment 5.4 - Dialogs';
 }

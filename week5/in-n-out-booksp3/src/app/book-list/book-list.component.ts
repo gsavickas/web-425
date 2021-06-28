@@ -8,6 +8,8 @@
  import { BooksService } from '../books.service';
  import { IBook } from '../book.interface';
  import { Observable } from 'rxjs';
+ import { MatDialog } from '@angular/material/dialog';
+ import { BookDetailsDialogComponent } from '../book-details-dialog/book-details-dialog.component';
 
 
  @Component({
@@ -21,16 +23,32 @@
    header: Array<string> = ['isbn', 'title', 'numOfPages', 'authors'];
    book!: IBook;
 
-   constructor(private booksService: BooksService) {
+   constructor(private booksService: BooksService, private dialog: MatDialog) {
+
      this.books=this.booksService.getBooks();
    }
+
 
    ngOnInit(): void {
    }
 
-   showBookDetails(isbn:string){
-     this.book = this.booksService.getBook(isbn);
-     console.log(this.book);
-   }
+   showBookDetails(isbn: string) {
+    this.book = this.booksService.getBook(isbn);
 
- }
+    const dialogRef = this.dialog.open(BookDetailsDialogComponent, {
+      data: {
+        book: this.book
+      },
+      disableClose: true,
+      width: '800px'
+    })
+
+    console.log(this.book);
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'confirm') {
+        this.book === null;
+      }
+    });
+  }
+}
