@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+/**
+ * Title: app.component.ts
+ * Author: Grayton Savickas
+ * Date: 27 June 2021
+ * Description: App component
+ */
+
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { IWishlistItem } from '../wishlist-item.interface';
 
 @Component({
   selector: 'app-wishlist-create',
@@ -7,9 +15,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishlistCreateComponent implements OnInit {
 
-  constructor() { }
+  @Output() addItemEmitter = new EventEmitter<IWishlistItem>();
+
+  item: IWishlistItem;
+
+  constructor() {
+    this.item = { } as IWishlistItem;
+  }
 
   ngOnInit(): void {
   }
 
+
+  addItem(){
+    this.addItemEmitter.emit({
+      title: this.item.title,
+      authors: this.item.authors
+    })
+
+    this.item = {} as IWishlistItem;
+  }
 }
