@@ -5,7 +5,7 @@
  * Description: App component
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-gpa',
@@ -13,6 +13,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gpa.component.css']
 })
 export class GpaComponent implements OnInit {
+
+  @Input()
+  gpaTotal!: number;
 
   constructor() { }
 

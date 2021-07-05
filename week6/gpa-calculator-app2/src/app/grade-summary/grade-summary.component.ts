@@ -5,7 +5,7 @@
  * Description: App component
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grade-summary',
@@ -13,6 +13,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grade-summary.component.css']
 })
 export class GradeSummaryComponent implements OnInit {
+
+  @Input()
+  grade!: string;
+  @Input()
+  course!: string;
 
   constructor() { }
 

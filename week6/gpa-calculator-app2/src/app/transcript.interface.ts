@@ -1,15 +1,11 @@
- /**
+/**
  * Title: app.component.ts
  * Author: Grayton Savickas
  * Date: 4 July 2021
  * Description: App component
  */
-.logo {
-  margin-top: 5px;
-}
 
-.main-container{
-  padding-top: 25px;
-  width: 80%;
-  margin: 0 auto;
+export interface ITranscript {
+  course: string;
+  grade: string;
 }
