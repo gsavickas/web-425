@@ -1,67 +1,41 @@
+/**
+ * Title: app.component.ts
+ * Author: Grayton Savickas
+ * Date: 27 June 2021
+ * Description: App component
+ */
+
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { of } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { IBook } from './book.interface';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BooksService {
 
-  books: Array<IBook>;
+  isbns: Array<string> = [
+    '0345339681',
+    '0261103571',
+    '9780593099322',
+    '9780261102361',
+    '9780261102378',
+    '9780590302715',
+    '9780316769532',
+    '9780743273565',
+    '9780590405959'
+  ]
 
-  constructor() {
+  constructor(private http: HttpClient) {
 
-    this.books = [
-      {
-        isbn: '123245453',
-        title: 'World War Z',
-        description: 'Set 10 years after the war for human survival against the zombies',
-        numOfPages: 365,
-        authors: ['Max Brooks']
-      },
-      {
-        isbn: '123245459',
-        title: 'Legends of the Zombie',
-        description: 'Legends of the zombies set in the universe of World War Z',
-        numOfPages: 420,
-        authors: ['Max Brooks']
-      },
-      {
-        isbn: '123245460',
-        title: 'Devotion',
-        description: 'Life after the zombies',
-        numOfPages: 456,
-        authors: ['Max Brooks']
-      },
-      {
-        isbn: '123245474',
-        title: 'Extinction',
-        description: 'The final days of humanity',
-        numOfPages: 356,
-        authors: ['Max Brooks']
-      },
-      {
-        isbn: '123245482',
-        title: 'The Zombie Survival Guide',
-        description: 'How to survive the Zombie horde',
-        numOfPages: 220,
-        authors: ['Max Brooks']
-      }
-    ]
   }
 
-  getBooks(): Observable<IBook[]> {
-    return of (this.books)
+  getBooks() {
+    let params = new HttpParams();
+
+    params = params.append('bibkeys', `ISBN:${this.isbns.join(',')}`);
+    params = params.append('format', 'json');
+    params = params.append('jscmd', 'details');
+    return this.http.get('https://openlibrary.org/api/books', {params: params})
   }
 
-  getBook(isbn: string): IBook{
-    for (let book of this.books){
-      if (book.isbn == isbn){
-        return book;
-      }
-    }
-    return {} as IBook;
-  }
 }

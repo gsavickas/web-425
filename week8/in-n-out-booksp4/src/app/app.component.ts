@@ -13,5 +13,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  assignment = 'Assignment 6.2 - Input/Output Properties, Part 1';
+  assignment = 'Welcome to In-N-Out-Books';
 }
