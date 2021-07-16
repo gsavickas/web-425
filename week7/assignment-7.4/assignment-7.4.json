@@ -1,0 +1,26 @@
+[
+    {
+        "userId": 1235436,
+        "userName": "Bob",
+        "password": "Bob'sSecret123",
+
+        "userCarts":[
+            {
+                "cartId": 12243532,
+                "cartServices": [
+                    {
+                        "serviceId":123452435,
+                        "serviceName": "Hard Drive Cleaning",
+                        "servicePrice": "$120"
+                    }
+                    {
+                        "serviceId":123452475,
+                        "serviceName": "8 gb of RAM upgrade",
+                        "servicePrice": "$60"
+                    }
+                ]
+            }
+        ]
+
+    }
+]
