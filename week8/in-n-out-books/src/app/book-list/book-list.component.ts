@@ -5,20 +5,20 @@
  * Description: App component
  */
  import { Component, OnInit } from '@angular/core';
- import { BooksService } from '../books.service';
- import { IBook } from '../book.interface';
- import { MatDialog } from '@angular/material/dialog';
- import { BookDetailsDialogComponent } from '../book-details-dialog/book-details-dialog.component';
+import { BooksService } from '../books.service';
+import { IBook } from '../book.interface';
+import { MatDialog } from '@angular/material/dialog';
+import { BookDetailsDialogComponent } from '../book-details-dialog/book-details-dialog.component';
 
- @Component({
-   selector: 'app-book-list',
-   templateUrl: './book-list.component.html',
-   styleUrls: ['./book-list.component.css']
- })
- export class BookListComponent implements OnInit {
+@Component({
+  selector: 'app-book-list',
+  templateUrl: './book-list.component.html',
+  styleUrls: ['./book-list.component.css']
+})
+export class BookListComponent implements OnInit {
 
   books: Array<IBook> = [];
-  book!: IBook;
+  book: IBook;
 
   constructor(private booksService: BooksService, private dialog: MatDialog) {
     this.booksService.getBooks().subscribe(res => {
@@ -27,7 +27,7 @@
         if (res.hasOwnProperty(key)) {
           let authors = [];
           if (res[key].details.authors) {
-            authors = res[key].details.authors.map(function(author: { name: any; }) {
+            authors = res[key].details.authors.map(function(author) {
               return author.name;
             })
           }
